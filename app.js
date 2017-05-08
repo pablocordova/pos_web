@@ -14,8 +14,9 @@ var app = express();
 
 const path = require('path');
 
-// Give permission to directory dist
+// Give permission to directory dist and public
 app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 module.exports = app;
 

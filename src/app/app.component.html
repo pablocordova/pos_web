@@ -1,10 +1,6 @@
-<div class="col-6 col-offset-3">
-    <h2>Register</h2>
-    <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
-        <div class="form-group" [ngClass]="{'has-error':f.submitted && !username.valid}">
-            <label for="firstName">First Name</label>
-            <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" required>
-            <div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>
-        </div>
-    </form>
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <app-register></app-register>
+    </div>
 </div>
