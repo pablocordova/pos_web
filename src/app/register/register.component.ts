@@ -19,12 +19,11 @@ export class RegisterComponent implements OnInit {
         private userService: UserService,
         private alertService: AlertService) { }
     
-
     ngOnInit() {
     }
 
     register() {
-        console.log("Enter register");
+        this.loading = true;
         this.userService.create(this.model)
             .subscribe(
                 data => {
@@ -34,6 +33,7 @@ export class RegisterComponent implements OnInit {
                 },
                 error => {
                     this.alertService.error(error);
+                    this.loading = false;
                 });
     }
 

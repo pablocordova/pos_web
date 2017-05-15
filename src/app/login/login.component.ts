@@ -9,7 +9,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class LoginComponent implements OnInit {
 
     model: any = {};
-    loading = false;
 
     constructor() { }
 

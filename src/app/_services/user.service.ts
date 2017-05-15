@@ -7,7 +7,6 @@ import { Http, Headers, RequestOptions, Response } from '@angular/http';
 
 import { User } from '../_models/user';
 
-
 @Injectable()
 export class UserService {
 
@@ -46,7 +45,7 @@ export class UserService {
         // TODO: Check if the token is needed to create users, I'm thinking not.
         if (currentUser && currentUser.token) {
             let headers = new Headers({ 'Authorization': 'Bearer' + currentUser.token });
-            return new RequestOptions({ headers: headers});
+            return new RequestOptions({ headers: headers });
         }
     }
 
