@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AlertService } from '../_services/alert.service';
-import { UserServices } from '../_services/user.service';
+import { UserService } from '../_services/user.service';
 
 @Component({
     selector: 'app-register',
@@ -14,11 +14,11 @@ export class RegisterComponent implements OnInit {
     model: any = {};
     loading = false;
 
-    constructor() { 
-        private router : Router;
-        private userService: UserServices;
-        private alertService: AlertService;
-    }
+    constructor(
+        private router : Router,
+        private userService: UserService,
+        private alertService: AlertService) { }
+    
 
     ngOnInit() {
     }

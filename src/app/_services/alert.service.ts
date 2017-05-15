@@ -34,7 +34,7 @@ export class AlertService {
         this.subject.next({ type:'error', text: message });
     }
     getMessage(): Observable<any> {
-        return this.subject.asObservable;
+        return this.subject.asObservable();
     }
 
 }

@@ -1,4 +1,6 @@
-<div class="col-sm-6 offset-sm-3">
+<!-- TODO: Check if it is possible don't use class "center-vertical" to center the register vertically on the page. 
+        The problem is that I'm using css and I have to repeat the class twice in login and register components  -->
+<div class="col-sm-6 offset-sm-3 center-vertical">
     <h2>Login</h2>    
     <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
         <div class="form-group" [ngClass]="{'has-danger':f.submitted && !username.valid}">

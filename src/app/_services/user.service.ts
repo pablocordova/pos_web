@@ -3,7 +3,7 @@
  * add the JWT from local storage to the Authorization header of each http request
  */
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOPtions, Response } from '@angular/http';
+import { Http, Headers, RequestOptions, Response } from '@angular/http';
 
 import { User } from '../_models/user';
 
