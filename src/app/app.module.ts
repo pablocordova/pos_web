@@ -12,13 +12,15 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { AlertService } from './_services/alert.service';
 import { UserService } from './_services/user.service';
+import { AlertComponent } from './_directives/alert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
