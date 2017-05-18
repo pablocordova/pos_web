@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var User = require("../models/user").User;
+
 // To create user POST /api/users
 router.post('/', function(req, res, next) {
     // Debuging request
