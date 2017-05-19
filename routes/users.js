@@ -5,10 +5,13 @@ var User = require("../models/user").User;
 
 // To create user POST /api/users
 router.post('/', function(req, res, next) {
-    // Debuging request
-    console.log(req.body);
-    return res.status(200).json({
-        message: 'success created'
+    User.create(req.body, function(err, post) {
+        if (err) {}
+        else {
+            return res.status(200).json({
+                message: 'success created'
+            });
+        }
     });
 });
 

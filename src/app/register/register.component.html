@@ -3,15 +3,15 @@
 <div class="col-sm-8 offset-sm-2 center-vertical">
     <h2>Register</h2>
     <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
-        <div class="form-group" [ngClass]="{'has-danger': f.submitted && !firstName.valid}">
+        <div class="form-group" [ngClass]="{'has-danger': f.submitted && !firstname.valid}">
             <label>First Name</label>
-            <input type="text" class="form-control form-control-danger" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" required>
-            <div *ngIf="f.submitted && !firstName.valid" class="form-control-feedback">First Name is required</div>
+            <input type="text" class="form-control form-control-danger" name="firstname" [(ngModel)]="model.firstname" #firstname="ngModel" required>
+            <div *ngIf="f.submitted && !firstname.valid" class="form-control-feedback">First Name is required</div>
         </div>
-        <div class="form-group" [ngClass]="{'has-danger': f.submitted && !lastName.valid}">
+        <div class="form-group" [ngClass]="{'has-danger': f.submitted && !lastname.valid}">
             <label>Last Name</label>
-            <input type="text" class="form-control form-control-danger" name="lastname" [(ngModel)]="model.lastName" #lastName="ngModel" required>
-            <div *ngIf="f.submitted && !lastName.valid" class="form-control-feedback">Last Name is required</div>
+            <input type="text" class="form-control form-control-danger" name="lastname" [(ngModel)]="model.lastname" #lastname="ngModel" required>
+            <div *ngIf="f.submitted && !lastname.valid" class="form-control-feedback">Last Name is required</div>
         </div>
         <div class="form-group" [ngClass]="{'has-danger': f.submitted && !username.valid}">
             <label>Username</label>

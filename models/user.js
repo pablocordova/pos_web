@@ -1,13 +1,13 @@
-var moongose = require('moongose');
+var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-var Schema = moongose.Schema;
+var Schema = mongoose.Schema;
 
-moongose.connect("mongodb://localhost/posdb");
+mongoose.connect("mongodb://localhost/posdb");
 
 var user_schema = new Schema({
-    first_name: String,
-    last_name: String,
+    firstname: String,
+    lastname: String,
     username: String,
     password: String
 });
@@ -28,6 +28,6 @@ user_schema.pre('save', function(next) {
     });
 });
 
-var User = moongose.model("User", user_schema);
+var User = mongoose.model("User", user_schema);
 
 module.exports.User = User;
