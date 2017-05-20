@@ -15,6 +15,14 @@ router.post('/', function(req, res, next) {
     });
 });
 
+// To authenticate user
+router.post('/authenticate', function(req, res, next) {
+    // Only to test
+    return res.status(200).json({
+        token: '777'
+    });
+});
+
 // To get user GET /api/users/id
 router.get('/:id', function(req, res, next) {
 
