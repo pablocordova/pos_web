@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 
 import { AuthGuard } from './_guards/auth.guard';
 import { AlertService } from './_services/alert.service';
+import { AuthenticationService } from './_services/authentication.service';
 import { UserService } from './_services/user.service';
 import { AlertComponent } from './_directives/alert.component';
 
@@ -31,7 +32,8 @@ import { AlertComponent } from './_directives/alert.component';
   providers: [
     AuthGuard,
     UserService,
-    AlertService
+    AlertService,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

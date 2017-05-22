@@ -23,8 +23,10 @@ const path = require('path');
  */
 
 var users = require('./routes/users');
+var authenticate = require('./routes/authenticate');
 
 app.use('/api/users', users);
+app.use('/api/authenticate', authenticate);
 
 // Give permission to directory dist and public
 app.use(express.static(path.join(__dirname, 'dist')));
