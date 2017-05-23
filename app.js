@@ -6,7 +6,21 @@
 
 var express = require('express');
 var bodyParser =require('body-parser');
+var passport = require('passport');
+var session = require('express-session');
 var app = express();
+
+/**
+ * Init passport
+ */
+ // Express session middleware
+app.use(session({
+    secret:"123456789",
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Use bodyParser
 app.use(bodyParser.urlencoded({ extended: false}));
