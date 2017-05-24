@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var bcrypt = require('bcryptjs');
+var jwt = require('jwt-simple');
 var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var User = require('../models/user').User;
+// Warning this key secret must be used only to test
+var secret = 'keysecret';
 
 // Process authentication by passport
 passport.use(new localStrategy(function(username, password, done) {
@@ -38,11 +41,14 @@ passport.deserializeUser(function(id, done) {
 
 // To authenticate user
 router.post('/', passport.authenticate('local'), function(req, res, next) {
+    let payload = { username : req.user.username };
+    //TODO: send the token on headers not on body
+    let token = jwt.encode(payload, secret);
     return res.status(200).json({
-        token: '777',
-        firstname: 'PabloMock',
-        lastname: 'CordovaMock',
-        username: 'usernameMock'
+        token: token,
+        firstname: req.user.firstname,
+        lastname: req.user.lastname,
+        username: req.user.username
     });
 });
 
