@@ -14,6 +14,7 @@ import { AlertService } from './_services/alert.service';
 import { AuthenticationService } from './_services/authentication.service';
 import { UserService } from './_services/user.service';
 import { AlertComponent } from './_directives/alert.component';
+import { PurchasesComponent } from './purchases/purchases.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AlertComponent } from './_directives/alert.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    AlertComponent
+    AlertComponent,
+    PurchasesComponent
   ],
   imports: [
     BrowserModule,
