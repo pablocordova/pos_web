@@ -15,6 +15,10 @@ import { AuthenticationService } from './_services/authentication.service';
 import { UserService } from './_services/user.service';
 import { AlertComponent } from './_directives/alert.component';
 import { PurchasesComponent } from './purchases/purchases.component';
+import { SalesComponent } from './sales/sales.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { ReportsComponent } from './reports/reports.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { PurchasesComponent } from './purchases/purchases.component';
     RegisterComponent,
     HomeComponent,
     AlertComponent,
-    PurchasesComponent
+    PurchasesComponent,
+    SalesComponent,
+    InventoryComponent,
+    ReportsComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
