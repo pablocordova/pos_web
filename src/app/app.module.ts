@@ -19,6 +19,7 @@ import { SalesComponent } from './sales/sales.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AdministrationComponent } from './administration/administration.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SettingsComponent } from './settings/settings.component';
     SalesComponent,
     InventoryComponent,
     ReportsComponent,
-    SettingsComponent
+    SettingsComponent,
+    AdministrationComponent
   ],
   imports: [
     BrowserModule,
