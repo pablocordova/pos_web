@@ -22,6 +22,10 @@ import { SettingsComponent } from './settings/settings.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { HistoryDocumentsComponent } from './history-documents/history-documents.component';
 
+// To angular material
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  MdButtonModule } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +45,8 @@ import { HistoryDocumentsComponent } from './history-documents/history-documents
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    MdButtonModule
   ],
   providers: [
     AuthGuard,
