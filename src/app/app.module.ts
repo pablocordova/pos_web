@@ -25,6 +25,8 @@ import { HistoryDocumentsComponent } from './history-documents/history-documents
 // To angular material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MdButtonModule } from '@angular/material';
+import { LateralBarComponent } from './lateral-bar/lateral-bar.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import {  MdButtonModule } from '@angular/material';
     ReportsComponent,
     SettingsComponent,
     AdministrationComponent,
-    HistoryDocumentsComponent
+    HistoryDocumentsComponent,
+    LateralBarComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
