@@ -1,0 +1,20 @@
+.products {
+    margin-top: 20px;
+}
+
+.products-table {
+    height: 300px;
+    position: relative;
+}
+
+.products-table tbody {
+    overflow-y: scroll;
+    position: absolute;
+    height: 300px;
+    width: 100%;
+}
+
+.products-table tbody tr {
+    width: 100%;
+    display: inline-table;
+}

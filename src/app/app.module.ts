@@ -21,12 +21,13 @@ import { ReportsComponent } from './reports/reports.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { HistoryDocumentsComponent } from './history-documents/history-documents.component';
+import { LateralBarComponent } from './lateral-bar/lateral-bar.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 // To angular material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MdButtonModule } from '@angular/material';
-import { LateralBarComponent } from './lateral-bar/lateral-bar.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { MdInputModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     FormsModule,
     HttpModule,
     routing,
-    MdButtonModule
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdInputModule
   ],
   providers: [
     AuthGuard,
