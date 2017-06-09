@@ -8,9 +8,9 @@
         <!-- Table containing all products-->
         <table class="table table-striped products-table">
             <tbody>
-                <tr *ngFor="let product of products">
+                <tr *ngFor="let product of products" (click)="selectRow($event)" on-mouseover="rowOver($event)">
                     <td>
-                        Hello how are you
+                        {{product}}
                     </td>
                 </tr>
             </tbody>

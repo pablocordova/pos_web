@@ -7,6 +7,10 @@
     position: relative;
 }
 
+.products-table:hover {
+    cursor: pointer;
+}
+
 .products-table tbody {
     overflow-y: scroll;
     position: absolute;
