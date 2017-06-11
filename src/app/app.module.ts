@@ -28,6 +28,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MdButtonModule } from '@angular/material';
 import { MdInputModule } from '@angular/material';
+import { TableFilterPipe } from './_pipes/table-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MdInputModule } from '@angular/material';
     AdministrationComponent,
     HistoryDocumentsComponent,
     LateralBarComponent,
-    NavBarComponent
+    NavBarComponent,
+    TableFilterPipe
   ],
   imports: [
     BrowserModule,

@@ -3,12 +3,12 @@
         <h2>Products</h2>
         <span class="fa fa-search"></span>
         <md-input-container>
-            <input mdInput placeholder="Search">
+            <input mdInput placeholder="Search" [(ngModel)]="textSearch">
         </md-input-container>
         <!-- Table containing all products-->
         <table class="table table-striped products-table">
-            <tbody>
-                <tr *ngFor="let product of products" (click)="selectRow($event)" on-mouseover="rowOver($event)">
+            <tbody #listProducts>
+                <tr *ngFor="let product of products | tableFilter: textSearch" (click)="selectRow($event)" on-mouseover="rowOver($event)">
                     <td>
                         {{product}}
                     </td>
