@@ -22,3 +22,25 @@
     width: 100%;
     display: inline-table;
 }
+
+.product-review {
+    text-align: center;
+}
+
+img {
+    border-style: groove;
+}
+
+.product-info {
+    border-style: groove;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.container-product-info {
+    text-align: center;
+}
+
+.product-amount tr td {
+    margin-right: 20px;
+}

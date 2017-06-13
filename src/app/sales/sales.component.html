@@ -1,5 +1,6 @@
+<!-- Fields to define the product -->
 <div class="row products">
-    <div class="col-sm-9">
+    <div class="col-sm-7">
         <h2>Products</h2>
         <span class="fa fa-search"></span>
         <md-input-container>
@@ -16,5 +17,55 @@
             </tbody>
         </table>
     </div>
-    <div class="col-sm-3"></div>
+    <!-- Lateral information about product image and resume -->
+    <div class="col-sm-5 product-review">
+        <div class="product-image">
+            <img src="http://2.bp.blogspot.com/-Z07xwMbhKnI/UI_u87frzdI/AAAAAAAAATc/prQVFY8QWh4/s1600/untitled.bmp" width="200px" height="200px">
+        </div>
+        <div class="container-product-info">
+            <div class="product-info">
+                <p>Basic Prices product description</p>
+                <p>1 Kg: XX $</p>
+                <p>1 doc: XX $</p>
+                <p>1 saco: XX $</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fields to choose how many items do you want -->
+<div class="row">
+    <div class="col-12">
+        <div>
+            <h2>Amount Product</h2>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-6">
+        <div class="form-control">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Amount</td>
+                        <td>Unit</td>
+                        <td>Total</td>
+                    </tr>
+                </thead>
+                <tbody class="product-amount">
+                    <tr>
+                        <td><input type="text" name="amount" class="form-control" placeholder="Amount"></td>
+                        <td>
+                            <select class="form-control">
+                                <option value="one">One</option>
+                                <option value="two">Two</option>
+                                <option value="three">Three</option>
+                            </select>
+                        </td>
+                        <td><span>4 $</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
