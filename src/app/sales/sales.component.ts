@@ -14,13 +14,19 @@ export class SalesComponent implements OnInit {
     // Contains element of last row where the mouse passed.
     lastRowOver: HTMLElement;
 
+    product = [{}];
+
     constructor() { }
 
     ngOnInit() {
 
     }
 
-
+    /**
+     *    Event when click in one product on the product's list, this one highlight with a specific background color.
+     *    @input {object} event - object with all properties of event generated, in this case the event is 'click'
+     *    @return nothing
+     */
     selectRow(event) {
         // Extract current row
         let currentRow = event.srcElement;
@@ -34,6 +40,13 @@ export class SalesComponent implements OnInit {
         // save this row
         this.lastRowSelect = currentRow;
     }
+
+    /**
+     *    Event when the mouse hover on the product's list, this one highlight with a specific background color
+     *    This color will be with less intensity and secondary way to difference when a item on the list is selected as the selecRow event.
+     *    @input {object} event - object with all properties of event generated, in this case the event is hover mouse inside product's list
+     *    @return nothing
+     */
 
     rowOver(event) {
         // Extrac current row
@@ -51,6 +64,18 @@ export class SalesComponent implements OnInit {
 
         // save this row
         this.lastRowOver = currentRow;
+    }
+
+    /**
+     *    Add a product inside sale table
+     *    @param nothing
+     *    @return nothing
+     */
+
+    addProduct() {
+        // Fake data to test
+        this.product.push({'amount':'5', 'product':'6', 'price':'7', 'total':'8', 'remove':'7'});
+
     }
 
 }

@@ -66,6 +66,40 @@
                     </tr>
                 </tbody>
             </table>
+            <button class="btn btn-success" (click)="addProduct()" >Add</button>
         </div>
+    </div>
+</div>
+<!-- Table about Orders -->
+<div class="row">
+    <div class="col-md-12">
+        <div>
+            <h2>Sale</h2>
+        </div>
+    </div>
+</div>
+<div class="row  justify-content-center">
+    <div class="col-md-10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Amount</td>
+                    <td>Product</td>
+                    <td>Unit price</td>
+                    <td>Total</td>
+                    <td>Remove</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let value of product'>
+                    <!-- TODO: Find to better way to avoid null elements when the table start-->
+                    <td *ngIf='value.amount'>{{value.amount}}</td>
+                    <td *ngIf='value.product'>{{value.product}}</td>
+                    <td *ngIf='value.price'>{{value.price}}</td>
+                    <td *ngIf='value.total'>{{value.total}}</td>
+                    <td *ngIf='value.remove'>{{value.remove}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
