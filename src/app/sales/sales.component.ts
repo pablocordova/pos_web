@@ -13,8 +13,10 @@ export class SalesComponent implements OnInit {
     lastRowSelect: HTMLElement;
     // Contains element of last row where the mouse passed.
     lastRowOver: HTMLElement;
-
+    // Array for all products
     product = [{}];
+    // variable to sum all product prices
+    sum_total = 0;
 
     constructor() { }
 
@@ -74,7 +76,13 @@ export class SalesComponent implements OnInit {
 
     addProduct() {
         // Fake data to test
-        this.product.push({'amount':'5', 'product':'6', 'price':'7', 'total':'8', 'remove':'7'});
+        let amount = 2;
+        let product = 'Suggar Casa Grande';
+        let price = 100.5;
+        let total = amount*price;
+
+        this.product.push({'amount': amount, 'product': product, 'price': price, 'total': total, 'remove': 'x'});
+        this.sum_total += total;
 
     }
 
