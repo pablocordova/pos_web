@@ -91,13 +91,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor='let value of product'>
+                <tr *ngFor='let value of product; let rowIndex = index'>
                     <!-- TODO: Find to better way to avoid null elements when the table start-->
                     <td *ngIf='value.amount'>{{value.amount}}</td>
                     <td *ngIf='value.product'>{{value.product}}</td>
                     <td *ngIf='value.price'>{{value.price}}</td>
                     <td *ngIf='value.total'>{{value.total}}</td>
-                    <td *ngIf='value.remove'>{{value.remove}}</td>
+                    <td *ngIf='value.product'>
+                        <button (click)='deleteRow(rowIndex)' class="btn btn-danger">Delete</button>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>

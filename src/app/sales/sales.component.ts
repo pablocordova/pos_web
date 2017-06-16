@@ -86,4 +86,14 @@ export class SalesComponent implements OnInit {
 
     }
 
+    /**
+     *    Delete row from table sales
+     *    @param {integer} index - row number to delete
+     *    @return nothing
+     */
+
+    deleteRow(index) {
+        this.product.splice(index, 1);
+    }
+
 }
