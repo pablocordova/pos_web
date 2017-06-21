@@ -10,7 +10,7 @@
         </div>
         <div class="form-group" [ngClass]="{'has-danger':f.submitted && !password.valid}">
             <label >Password</label>
-            <input type="text" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required>
+            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required>
             <div *ngIf="f.submitted && !password.valid" class="form-control-feedback">Password is required</div>
         </div>
         <div class="form-group">

@@ -4,8 +4,8 @@
             <div class="card">
                 <div class="card-header">
                     <h5>
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                        Sales
+                        <a class="collapsed titleLB" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="aSales" (click)="eventLateralBar('aSales')">
+                            Sales
                         </a>
                     </h5>
                 </div>
@@ -30,7 +30,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5>
-                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        <a class="collapsed titleLB" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" id="aPurchases" (click)="eventLateralBar('aPurchases')">
                         Purchases
                         </a>
                     </h5>
@@ -55,7 +55,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5>
-                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                        <a class="collapsed titleLB" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" id="aReport" (click)="eventLateralBar('aReport')">
                             Report
                         </a>
                     </h5>
@@ -85,7 +85,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5>
-                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                        <a class="collapsed titleLB" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" id="aAdministration" (click)="eventLateralBar('aAdministration')">
                             Administration
                         </a>
                     </h5>
@@ -105,7 +105,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5>
-                        <a href="#">
+                        <a class="titleLB" href="#" id="aSettings" (click)="eventLateralBar('aSettings')">
                             Settings
                         </a>
                     </h5>
