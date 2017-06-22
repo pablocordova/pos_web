@@ -50,11 +50,12 @@
                         <td>Amount</td>
                         <td>Unit</td>
                         <td>Total</td>
+                        <td></td>
                     </tr>
                 </thead>
-                <tbody class="product-amount">
+                <tbody>
                     <tr>
-                        <td><input type="text" name="amount" class="form-control" placeholder="Amount"></td>
+                        <td><input type="text" name="amount" class="form-control product-input-amount" placeholder="Amount"></td>
                         <td>
                             <select class="form-control">
                                 <option value="one">One</option>
@@ -63,10 +64,10 @@
                             </select>
                         </td>
                         <td><span>4 $</span></td>
+                        <td><button class="btn btn-success" (click)="addProduct()" >Add</button></td>
                     </tr>
                 </tbody>
             </table>
-            <button class="btn btn-success" (click)="addProduct()" >Add</button>
         </div>
     </div>
 </div>

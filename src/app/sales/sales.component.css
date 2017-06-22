@@ -41,14 +41,14 @@ img {
     text-align: center;
 }
 
-.product-amount tr td {
-    margin-right: 20px;
-}
-
 .product-buttons {
     text-align: center;
 }
 
 .product-buttons .btn {
     margin-left: 50px;
+}
+
+.product-input-amount {
+    width: 90px;
 }
