@@ -14,13 +14,10 @@ import { AlertService } from './_services/alert.service';
 import { AuthenticationService } from './_services/authentication.service';
 import { UserService } from './_services/user.service';
 import { AlertComponent } from './_directives/alert.component';
-import { PurchasesComponent } from './purchases/purchases.component';
 import { SalesComponent } from './sales/sales.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SettingsComponent } from './settings/settings.component';
-import { AdministrationComponent } from './administration/administration.component';
-import { HistoryDocumentsComponent } from './history-documents/history-documents.component';
 import { LateralBarComponent } from './lateral-bar/lateral-bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
@@ -29,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {  MdButtonModule } from '@angular/material';
 import { MdInputModule } from '@angular/material';
 import { TableFilterPipe } from './_pipes/table-filter.pipe';
+import { CustomersComponent } from './customers/customers.component';
 
 @NgModule({
   declarations: [
@@ -37,16 +35,14 @@ import { TableFilterPipe } from './_pipes/table-filter.pipe';
     RegisterComponent,
     HomeComponent,
     AlertComponent,
-    PurchasesComponent,
     SalesComponent,
     InventoryComponent,
     ReportsComponent,
     SettingsComponent,
-    AdministrationComponent,
-    HistoryDocumentsComponent,
     LateralBarComponent,
     NavBarComponent,
-    TableFilterPipe
+    TableFilterPipe,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,
