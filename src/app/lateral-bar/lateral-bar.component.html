@@ -4,8 +4,8 @@
             <div class="card">
                 <div class="card-header">
                     <h5>
-                        <a class="titleLB" id="aSales" (click)="eventLateralBar('aSales')">
-                            <i class="fa fa-shopping-cart"></i><a href="#">Sales</a> 
+                        <a class="titleLB" id="aSales" (click)="eventLateralBar('aSales')" [routerLink]="['/sales']">
+                            <i class="fa fa-shopping-cart"></i>Sales
                         </a>
                     </h5>
                 </div>
@@ -13,8 +13,8 @@
             <div class="card">
                 <div class="card-header">
                     <h5>
-                        <a class="titleLB" id="aInventory" (click)="eventLateralBar('aInventory')">
-                           <i class="fa fa-archive"></i><a href="#">Inventory</a> 
+                        <a class="titleLB" id="aInventory" (click)="eventLateralBar('aInventory')" [routerLink]="['/inventory']">
+                           <i class="fa fa-archive"></i>Inventory
                         </a>
                     </h5>
                 </div>
@@ -22,8 +22,8 @@
             <div class="card">
                 <div class="card-header">
                     <h5>
-                        <a class="titleLB" id="aCustomer" (click)="eventLateralBar('aCustomer')">
-                            <i class="fa fa-user"></i><a href="#">Customers</a>
+                        <a class="titleLB" id="aCustomer" (click)="eventLateralBar('aCustomer')" [routerLink]="['/customers']">
+                            <i class="fa fa-user"></i>Customers
                         </a>
                     </h5>
                 </div>
@@ -31,8 +31,8 @@
             <div class="card">
                 <div class="card-header">
                     <h5>
-                        <a class="titleLB"  id="aReport" (click)="eventLateralBar('aReport')">
-                            <i class="fa fa-line-chart"></i><a href="#">Reports</a>
+                        <a class="titleLB"  id="aReport" (click)="eventLateralBar('aReport')" [routerLink]="['/reports']">
+                            <i class="fa fa-line-chart"></i>Reports
                         </a>
                     </h5>
                 </div>
@@ -40,8 +40,8 @@
             <div class="card">
                 <div class="card-header">
                     <h5>
-                        <a class="titleLB" href="#" id="aSettings" (click)="eventLateralBar('aSettings')">
-                            <i class="fa fa-cogs"></i><a href="#">Settings</a>
+                        <a class="titleLB" id="aSettings" (click)="eventLateralBar('aSettings')" [routerLink]="['/settings']">
+                            <i class="fa fa-cogs"></i>Settings
                         </a>
                     </h5>
                 </div>
