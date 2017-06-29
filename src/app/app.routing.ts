@@ -11,15 +11,20 @@ import { SettingsComponent } from './settings/settings.component';
 import { AuthGuard } from './_guards/auth.guard';
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-    { path: 'sales', component: SalesComponent },
+    {   path: '', 
+        component: HomeComponent, 
+        canActivate: [AuthGuard], 
+        children: [
+            { path: '', redirectTo: 'sales', pathMatch: 'full'},
+            { path: 'sales', component: SalesComponent},
+            { path: 'inventory', component: InventoryComponent },
+            { path: 'customers', component: CustomersComponent },
+            { path: 'reports', component: ReportsComponent },
+            { path: 'settings', component: SettingsComponent }
+        ] 
+    },
     { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: 'inventory', component: InventoryComponent },
-    { path: 'customers', component: CustomersComponent },
-    { path: 'reports', component: ReportsComponent },
-    { path: 'settings', component: SettingsComponent },
-    { path: '**', redirectTo:'' }
+    { path: 'register', component: RegisterComponent }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
