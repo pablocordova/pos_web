@@ -26,6 +26,15 @@
     padding-bottom: 0px;
 }
 
+.fa {
+    color: white;
+    display: inline;
+}
+
+.nav-link {
+    display: inline;
+}
+
 @media screen and (max-width: 991px) {
     .navbar-collapse li ul {
         left: 0px;

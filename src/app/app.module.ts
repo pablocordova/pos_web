@@ -18,7 +18,6 @@ import { SalesComponent } from './sales/sales.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SettingsComponent } from './settings/settings.component';
-import { LateralBarComponent } from './lateral-bar/lateral-bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 // To angular material
@@ -39,7 +38,6 @@ import { CustomersComponent } from './customers/customers.component';
     InventoryComponent,
     ReportsComponent,
     SettingsComponent,
-    LateralBarComponent,
     NavBarComponent,
     TableFilterPipe,
     CustomersComponent
