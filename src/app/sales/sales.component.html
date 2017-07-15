@@ -3,9 +3,21 @@
     <div class="col-sm-7">
         <h2>Products</h2>
         <span class="fa fa-search"></span>
-        <md-input-container>
+        <md-input-container class="fields-inline">
             <input mdInput placeholder="Search" [(ngModel)]="textSearch">
         </md-input-container>
+        <!-- Fields to choose how many items do you want -->
+        <input type="text" name="amount" class="form-control product-input-amount fields-inline" placeholder="Amount">
+        
+        <select class="form-control fields-inline">
+            <option value="one">One</option>
+            <option value="two">Two</option>
+            <option value="three">Three</option>
+        </select>
+        
+        <span class="fields-inline">4 $</span>
+        <button class="btn btn-success fields-inline" (click)="addProduct()" >Add</button>
+
         <!-- Table containing all products-->
         <table class="table table-striped products-table">
             <tbody #listProducts>
@@ -18,7 +30,7 @@
         </table>
     </div>
     <!-- Lateral information about product image and resume -->
-    <div class="col-sm-5 product-review">
+    <div class="col-sm-3 product-review">
         <div class="product-image">
             <img src="http://2.bp.blogspot.com/-Z07xwMbhKnI/UI_u87frzdI/AAAAAAAAATc/prQVFY8QWh4/s1600/untitled.bmp" width="200px" height="200px">
         </div>
@@ -31,46 +43,12 @@
             </div>
         </div>
     </div>
+    <!-- Resume price-->
+    <div class="col-sm-2">
+        
+    </div>
 </div>
 
-<!-- Fields to choose how many items do you want -->
-<div class="row">
-    <div class="col-12">
-        <div>
-            <h2>Amount Product</h2>
-        </div>
-    </div>
-</div>
-<div class="row justify-content-center">
-    <div class="col-8">
-        <div>
-            <table class="table-amount">
-                <thead>
-                    <tr>
-                        <th>Amount</th>
-                        <th>Unit</th>
-                        <th>Total</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text" name="amount" class="form-control product-input-amount" placeholder="Amount"></td>
-                        <td>
-                            <select class="form-control">
-                                <option value="one">One</option>
-                                <option value="two">Two</option>
-                                <option value="three">Three</option>
-                            </select>
-                        </td>
-                        <td><span>4 $</span></td>
-                        <td><button class="btn btn-success" (click)="addProduct()" >Add</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
 <!-- Table about Orders -->
 <div class="row">
     <div class="col-md-12">

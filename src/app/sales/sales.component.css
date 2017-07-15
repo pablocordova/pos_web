@@ -49,23 +49,31 @@
 .product-input-amount {
     width: 100%;
 }
+
 .product-image {
     border-style: groove;
     border-radius: 20px;
     margin-left: 20%;
     margin-right: 20%;
 }
+
 .product-info-title {
     font-weight: bold;
     color: grey;
 }
+
 .table-amount {
     border-spacing: 20px;
     border-collapse: separate;
 
 }
+
 .table-amount  td,
 .table-amount th{
     width: 110px;
     text-align: center;
+}
+
+.fields-inline {
+    display: inline;
 }
