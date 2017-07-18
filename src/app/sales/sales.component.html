@@ -1,15 +1,15 @@
 <!-- Fields to define the product -->
 <div class="row products">
-    <div class="col-sm-7">
+    <div class="col-sm-8">
         <h2>Products</h2>
         <span class="fa fa-search"></span>
-        <md-input-container class="fields-inline">
-            <input mdInput placeholder="Search" [(ngModel)]="textSearch">
-        </md-input-container>
+
+        <input class="form-control product-search fields-inline" placeholder="Search" [(ngModel)]="textSearch">
+
         <!-- Fields to choose how many items do you want -->
         <input type="text" name="amount" class="form-control product-input-amount fields-inline" placeholder="Amount">
         
-        <select class="form-control fields-inline">
+        <select class="form-control fields-inline product-unit">
             <option value="one">One</option>
             <option value="two">Two</option>
             <option value="three">Three</option>
@@ -30,7 +30,7 @@
         </table>
     </div>
     <!-- Lateral information about product image and resume -->
-    <div class="col-sm-3 product-review">
+    <div class="col-sm-2 product-review">
         <div class="product-image">
             <img src="http://2.bp.blogspot.com/-Z07xwMbhKnI/UI_u87frzdI/AAAAAAAAATc/prQVFY8QWh4/s1600/untitled.bmp" width="200px" height="200px">
         </div>

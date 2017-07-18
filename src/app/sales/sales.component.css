@@ -46,8 +46,18 @@
     margin-left: 50px;
 }
 
+/* Fields to choose a product*/
+
 .product-input-amount {
-    width: 100%;
+    width: 70px;
+}
+
+.product-search {
+    width: 280px;
+}
+
+.product-unit {
+    width: 100px;
 }
 
 .product-image {
