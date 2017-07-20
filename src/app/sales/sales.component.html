@@ -1,5 +1,19 @@
 <!-- Fields to define the product -->
 <div class="row products">
+     <!-- Lateral information about product image and resume -->
+    <div class="col-sm-4 product-review">
+        <div class="product-image">
+            <img src="http://2.bp.blogspot.com/-Z07xwMbhKnI/UI_u87frzdI/AAAAAAAAATc/prQVFY8QWh4/s1600/untitled.bmp" width="130px" height="130px">
+        </div>
+        <div class="container-product-info">
+            <div class="product-info">
+                <p>1 Kg: XX $</p>
+                <p>1 doc: XX $</p>
+                <p>1 saco: XX $</p>
+            </div>
+        </div>
+    </div>
+    <!-- Main table, to sell products -->
     <div class="col-sm-8">
         <h2>Products</h2>
         <span class="fa fa-search"></span>
@@ -7,7 +21,7 @@
         <input class="form-control product-search fields-inline" placeholder="Search" [(ngModel)]="textSearch">
 
         <!-- Fields to choose how many items do you want -->
-        <input type="text" name="amount" class="form-control product-input-amount fields-inline" placeholder="Amount">
+        <input type="text" name="amount" class="form-control product-input-amount fields-inline">
         
         <select class="form-control fields-inline product-unit">
             <option value="one">One</option>
@@ -28,21 +42,9 @@
                 </tr>
             </tbody>
         </table>
+        <div>Div example</div>
     </div>
-    <!-- Lateral information about product image and resume -->
-    <div class="col-sm-2 product-review">
-        <div class="product-image">
-            <img src="http://2.bp.blogspot.com/-Z07xwMbhKnI/UI_u87frzdI/AAAAAAAAATc/prQVFY8QWh4/s1600/untitled.bmp" width="200px" height="200px">
-        </div>
-        <div class="container-product-info">
-            <div class="product-info">
-                <p class="product-info-title">Basic Prices product description</p>
-                <p>1 Kg: XX $</p>
-                <p>1 doc: XX $</p>
-                <p>1 saco: XX $</p>
-            </div>
-        </div>
-    </div>
+   
     <!-- Resume price-->
     <div class="col-sm-2">
         

@@ -23,20 +23,27 @@
     width: 100%;
     display: inline-table;
 }
-
-.product-review {
-    text-align: center;
-}
+/* Left Lateral information, Product image and summary */
 
 .product-info {
     border-style: groove;
-    margin-left: 20%;
-    margin-right: 20%;
 }
 
 .container-product-info {
-    text-align: center;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    vertical-align: top;
 }
+
+.product-image {
+    border-style: groove;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* ------------------------------------------------- */
 
 .product-buttons {
     text-align: center;
@@ -58,13 +65,6 @@
 
 .product-unit {
     width: 100px;
-}
-
-.product-image {
-    border-style: groove;
-    border-radius: 20px;
-    margin-left: 20%;
-    margin-right: 20%;
 }
 
 .product-info-title {
