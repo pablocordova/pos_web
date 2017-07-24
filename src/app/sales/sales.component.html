@@ -2,6 +2,7 @@
 <div class="row products">
      <!-- Lateral information about product image and resume -->
     <div class="col-sm-4 product-review">
+        <h2>Products</h2>
         <div class="product-image">
             <img src="http://2.bp.blogspot.com/-Z07xwMbhKnI/UI_u87frzdI/AAAAAAAAATc/prQVFY8QWh4/s1600/untitled.bmp" width="130px" height="130px">
         </div>
@@ -12,13 +13,28 @@
                 <p>1 saco: XX $</p>
             </div>
         </div>
+
+        <div>
+            <span class="fa fa-search"></span>
+            <input class="form-control product-search fields-inline" placeholder="Search" [(ngModel)]="textSearch">
+        </div>
+
+        <!-- Table containing all products-->
+        <table class="table table-striped products-table">
+            <tbody #listProducts>
+                <tr *ngFor="let product of products | tableFilter: textSearch" (click)="selectRow($event)" on-mouseover="rowOver($event)">
+                    <td>
+                        {{product}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
     <!-- Main table, to sell products -->
-    <div class="col-sm-8">
-        <h2>Products</h2>
-        <span class="fa fa-search"></span>
-
-        <input class="form-control product-search fields-inline" placeholder="Search" [(ngModel)]="textSearch">
+    <div class="col-sm-6">
+        
+        <h2>Sale</h2>
 
         <!-- Fields to choose how many items do you want -->
         <input type="text" name="amount" class="form-control product-input-amount fields-inline">
@@ -32,35 +48,6 @@
         <span class="fields-inline">4 $</span>
         <button class="btn btn-success fields-inline" (click)="addProduct()" >Add</button>
 
-        <!-- Table containing all products-->
-        <table class="table table-striped products-table">
-            <tbody #listProducts>
-                <tr *ngFor="let product of products | tableFilter: textSearch" (click)="selectRow($event)" on-mouseover="rowOver($event)">
-                    <td>
-                        {{product}}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <div>Div example</div>
-    </div>
-   
-    <!-- Resume price-->
-    <div class="col-sm-2">
-        
-    </div>
-</div>
-
-<!-- Table about Orders -->
-<div class="row">
-    <div class="col-md-12">
-        <div>
-            <h2>Sale</h2>
-        </div>
-    </div>
-</div>
-<div class="row  justify-content-center">
-    <div class="col-md-10">
         <table class="table">
             <thead>
                 <tr>
@@ -82,19 +69,32 @@
                         <button (click)='deleteRow(rowIndex)' class="btn btn-danger">Delete</button>
                     </td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>Total</td>
-                    <td>{{sum_total}}</td>
-                    <td></td>
-                </tr>
             </tbody>
         </table>
+
     </div>
-</div>
-<div class="row justify-content-center">
-    <div class="col-md-10 product-buttons">
+   
+    <!-- Resume price-->
+    <div class="col-sm-2">
+        <div>
+            <p>
+                <label>Client: </label>
+                <label>Defaul client</label>
+                <button class="btn btn-default">Change Client</button>
+            </p>
+            <p>
+                <label>Subtotal: </label>
+                <label>XXX$</label>
+            </p>
+            <p>
+                <label>IGV: </label>
+                <label>XXX$</label>
+            </p>
+            <p>
+                <label>Total: </label>
+                <label>{{sum_total}}</label>
+            </p>
+        </div>
         <button class="btn btn-primary">Done</button>
         <button class="btn btn-default">Clear</button>
     </div>
