@@ -61,7 +61,7 @@
             <tbody>
                 <tr *ngFor='let value of product; let rowIndex = index'>
                     <!-- TODO: Find to better way to avoid null elements when the table start-->
-                    <td *ngIf='value.amount'>{{value.amount}}</td>
+                    <td *ngIf='value.amount'><input type="number" name="amountProduct" value={{value.amount}} min="0" pattern="^\d+$"></td>
                     <td *ngIf='value.product'>{{value.product}}</td>
                     <td *ngIf='value.price'>{{value.price}}</td>
                     <td *ngIf='value.total'>{{value.total}}</td>
