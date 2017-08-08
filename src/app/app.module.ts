@@ -26,6 +26,8 @@ import {  MdButtonModule } from '@angular/material';
 import { MdInputModule } from '@angular/material';
 import { TableFilterPipe } from './_pipes/table-filter.pipe';
 import { CustomersComponent } from './customers/customers.component';
+import { ProductsComponent } from './products/products.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { CustomersComponent } from './customers/customers.component';
     SettingsComponent,
     NavBarComponent,
     TableFilterPipe,
-    CustomersComponent
+    CustomersComponent,
+    ProductsComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

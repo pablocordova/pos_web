@@ -8,7 +8,15 @@ var express = require('express');
 var bodyParser =require('body-parser');
 var passport = require('passport');
 var session = require('express-session');
+var mongoose = require('mongoose');
+var constans = require('./src/assets/constans');
 var app = express();
+
+/**
+ *	Connect to mongoDB
+ */
+
+mongoose.connect(constans.MONGO_PATH);
 
 /**
  * Init passport

@@ -8,6 +8,8 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { CustomersComponent} from './customers/customers.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SettingsComponent } from './settings/settings.component';
+import { ProductsComponent } from './products/products.component';
+import { CategoriesComponent } from './categories/categories.component';
 import { AuthGuard } from './_guards/auth.guard';
 
 const appRoutes: Routes = [
@@ -20,7 +22,9 @@ const appRoutes: Routes = [
             { path: 'inventory', component: InventoryComponent },
             { path: 'customers', component: CustomersComponent },
             { path: 'reports', component: ReportsComponent },
-            { path: 'settings', component: SettingsComponent }
+            { path: 'settings', component: SettingsComponent },
+            { path: 'products', component: ProductsComponent },
+            { path: 'categories', component: CategoriesComponent }
         ] 
     },
     { path: 'login', component: LoginComponent },

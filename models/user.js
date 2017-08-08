@@ -3,8 +3,6 @@ var bcrypt = require('bcryptjs');
 
 var Schema = mongoose.Schema;
 
-mongoose.connect("mongodb://localhost/posdb");
-
 var user_schema = new Schema({
     firstname: String,
     lastname: String,
