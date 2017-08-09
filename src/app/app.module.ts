@@ -29,6 +29,9 @@ import { CustomersComponent } from './customers/customers.component';
 import { ProductsComponent } from './products/products.component';
 import { CategoriesComponent } from './categories/categories.component';
 
+// Translate module
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +56,8 @@ import { CategoriesComponent } from './categories/categories.component';
     routing,
     BrowserAnimationsModule,
     MdButtonModule,
-    MdInputModule
+    MdInputModule,
+    TranslateModule
   ],
   providers: [
     AuthGuard,
