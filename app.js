@@ -46,9 +46,12 @@ const path = require('path');
 
 var users = require('./routes/users');
 var authenticate = require('./routes/authenticate');
+var category = require('./routes/category');
 
 app.use('/api/users', users);
 app.use('/api/authenticate', authenticate);
+
+app.use('api/category', category);
 
 // Give permission to directory dist and public
 app.use(express.static(path.join(__dirname, 'dist')));
