@@ -3,6 +3,7 @@
     "node_modules/codelyzer"
   ],
   "rules": {
+    "beforeColon": false,
     "callable-types": true,
     "class-name": true,
     "comment-format": [
@@ -22,7 +23,7 @@
     "label-position": true,
     "max-line-length": [
       true,
-      140
+      105
     ],
     "member-access": false,
     "member-ordering": [

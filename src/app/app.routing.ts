@@ -13,22 +13,23 @@ import { CategoriesComponent } from './categories/categories.component';
 import { AuthGuard } from './_guards/auth.guard';
 
 const appRoutes: Routes = [
-    {   path: '', 
-        component: HomeComponent, 
-        canActivate: [AuthGuard], 
-        children: [
-            { path: '', redirectTo: 'sales', pathMatch: 'full'},
-            { path: 'sales', component: SalesComponent},
-            { path: 'inventory', component: InventoryComponent },
-            { path: 'customers', component: CustomersComponent },
-            { path: 'reports', component: ReportsComponent },
-            { path: 'settings', component: SettingsComponent },
-            { path: 'products', component: ProductsComponent },
-            { path: 'categories', component: CategoriesComponent }
-        ] 
-    },
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent }
+  {
+    path: '',
+    component: HomeComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: '', redirectTo: 'sales', pathMatch: 'full' },
+      { path: 'sales', component: SalesComponent },
+      { path: 'inventory', component: InventoryComponent },
+      { path: 'customers', component: CustomersComponent },
+      { path: 'reports', component: ReportsComponent },
+      { path: 'settings', component: SettingsComponent },
+      { path: 'products', component: ProductsComponent },
+      { path: 'categories', component: CategoriesComponent }
+    ]
+  },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

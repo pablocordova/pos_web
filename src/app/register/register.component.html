@@ -1,30 +1,30 @@
 <!-- TODO: Check if it is possible don't use class "center-vertical" to center the login vertically on the page. 
         The problem is that I'm using css and I have to repeat the class twice in login and register components  -->
 <div class="col-sm-8 offset-sm-2 center-vertical">
-    <h2>Register</h2>
-    <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
-        <div class="form-group" [ngClass]="{'has-danger': f.submitted && !firstname.valid}">
-            <label>First Name</label>
-            <input type="text" class="form-control form-control-danger" name="firstname" [(ngModel)]="model.firstname" #firstname="ngModel" required>
-            <div *ngIf="f.submitted && !firstname.valid" class="form-control-feedback">First Name is required</div>
-        </div>
-        <div class="form-group" [ngClass]="{'has-danger': f.submitted && !lastname.valid}">
-            <label>Last Name</label>
-            <input type="text" class="form-control form-control-danger" name="lastname" [(ngModel)]="model.lastname" #lastname="ngModel" required>
-            <div *ngIf="f.submitted && !lastname.valid" class="form-control-feedback">Last Name is required</div>
-        </div>
-        <div class="form-group" [ngClass]="{'has-danger': f.submitted && !username.valid}">
-            <label>Username</label>
-            <input type="text" class="form-control form-control-danger" name="username" [(ngModel)]="model.username" #username="ngModel" required>
-            <div *ngIf="f.submitted && !username.valid" class="form-control-feedback">Username is required</div>
-        </div>
-        <div class="form-group" [ngClass]="{'has-danger': f.submitted && !password.valid}">
-            <label>Password</label>
-            <input type="password" class="form-control form-control-danger" name="password" [(ngModel)]="model.password" #password="ngModel" required>
-            <div *ngIf="f.submitted && !password.valid" class="form-control-feedback">Password is required</div>
-        </div>
-        <div class="form-group">
-            <button [disabled]="loading" class="btn btn-primary">Register</button>
-        </div>
-    </form>
+  <h2>Register</h2>
+  <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+    <div class="form-group" [ngClass]="{'has-danger': f.submitted && !firstname.valid}">
+      <label>First Name</label>
+      <input type="text" class="form-control form-control-danger" name="firstname" [(ngModel)]="model.firstname" #firstname="ngModel" required>
+      <div *ngIf="f.submitted && !firstname.valid" class="form-control-feedback">First Name is required</div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-danger': f.submitted && !lastname.valid}">
+      <label>Last Name</label>
+      <input type="text" class="form-control form-control-danger" name="lastname" [(ngModel)]="model.lastname" #lastname="ngModel" required>
+      <div *ngIf="f.submitted && !lastname.valid" class="form-control-feedback">Last Name is required</div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-danger': f.submitted && !username.valid}">
+      <label>Username</label>
+      <input type="text" class="form-control form-control-danger" name="username" [(ngModel)]="model.username" #username="ngModel" required>
+      <div *ngIf="f.submitted && !username.valid" class="form-control-feedback">Username is required</div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-danger': f.submitted && !password.valid}">
+      <label>Password</label>
+      <input type="password" class="form-control form-control-danger" name="password" [(ngModel)]="model.password" #password="ngModel" required>
+      <div *ngIf="f.submitted && !password.valid" class="form-control-feedback">Password is required</div>
+    </div>
+    <div class="form-group">
+      <button [disabled]="loading" class="btn btn-primary">Register</button>
+    </div>
+  </form>
 </div>

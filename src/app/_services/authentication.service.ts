@@ -9,16 +9,18 @@ export class AuthenticationService {
   constructor(private http: Http) { }
 
   login(username: string, password: string) {
-      let headers = new Headers({ 'Content-Type': 'application/json' });
-      let options = new RequestOptions({ headers: headers});
-      return this.http.post('/api/authenticate', JSON.stringify({ username: username, password: password }), options)
-                  .map((response: Response) => {
-                      let user = response.json();
-                      if(user && user.token) {
-                          localStorage.setItem('currentUser', JSON.stringify(user));
-                      }
-                  });
 
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers});
+    const body = JSON.stringify({ username: username, password: password });
+
+    return this.http.post('/api/authenticate', body, options)
+                .map((response: Response) => {
+                  const user = response.json();
+                  if (user && user.token) {
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                  }
+                });
   }
 
   logout() {

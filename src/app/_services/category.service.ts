@@ -6,17 +6,17 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CategoryService {
 
-    constructor(private http : Http) { }
+  constructor(private http: Http) { }
 
-    create(params : Object) {
-        let headers = new Headers({ 'Content-type' : 'application/json' }); 
-        let options = new RequestOptions({ headers : headers });
-        let body = JSON.stringify(params);
+  create(params: Object) {
+    const headers = new Headers({ 'Content-type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
+    const body = JSON.stringify(params);
 
-        return this.http.post('/api/category', body, options)
-                        .map((response : Response) => {
-                            return response.json();
-                        });
-    }
+    return this.http.post('/api/category', body, options)
+                    .map((response: Response) => {
+                      return response.json();
+                    });
+  }
 
 }
